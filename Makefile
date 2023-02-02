@@ -2,7 +2,7 @@ NAME = ft_containers
 
 SRCS = main.cpp
 
-INCLUDE= 
+INCLUDE= .
 
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
