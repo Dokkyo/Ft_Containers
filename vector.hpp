@@ -33,10 +33,10 @@ namespace ft
                 while (++i < n)
                     std::cout << i << "=" << _tab[i] << "\n";
             };
-            template <class InputIterator>
-            vector (InputIterator first, InputIterator last, const allocator_type& alloc = allocator_type()) {
+            // template <class InputIterator>
+            // vector (InputIterator first, InputIterator last, const allocator_type& alloc = allocator_type()) {
 
-            };
+            // };
             // vector (const vector& x){
 
             // };

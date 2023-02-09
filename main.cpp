@@ -8,13 +8,14 @@ int main()
 //   std::vector<int> second (4,100);                       // four ints with value 100
 //   std::vector<int> third (second.begin(),second.end());  // iterating through second
 //   std::vector<int> fourth (third);                       // a copy of third
-
+      std::iterator<std::random_access_iterator_tag, int> i;
+      std::vector<int>::iterator j; 
   // constructors used in the same order as described above:
   ft::vector<int> un;                                // empty vector of ints
   ft::vector<int> second(4,100);                       // four ints with value 100
-  ft::vector<int> third (second.begin(),second.end());  // iterating through second
+  // ft::vector<int> third (second.begin(),second.end());  // iterating through second
 //   ft::vector<int> fourth (third);                       // a copy of third
-
+  ft::vector<int>::i
 
     return 0;
 }
