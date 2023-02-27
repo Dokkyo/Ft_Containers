@@ -21,7 +21,7 @@ int main ()
 {
     std::cout << "Message of the day" << "\n" \
     << "                           " << "\n" \
-    << "      ____                " << "\n" \
+    << "      ____                 " << "\n" \
     << "     |  o_|                " << "\n" \
     << "    _| |__                 " << "\n" \
     << "   /      \\               " << "\n" \
@@ -53,18 +53,39 @@ int main ()
     std::cout << "std::integral_constant<bool, false>::value: " << std::integral_constant<bool, false>::value << std::endl;
     std::cout << std::endl;
 
-  // ft::vector<int> foo (3,0);
-  // ft::vector<int> bar (5,0); //leak
+    std::cout << "FT PAIR TESTS" << std::endl;
+    ft::pair<int,char> foo (10,'z');
+    ft::pair<int,char> bar (90,'a');
 
-  // std::cout << "addr foo " << &foo << std::endl;
-  // std::cout << "addr bar " << &bar << std::endl;
+    if (foo==bar) std::cout << "foo and bar are equal\n";
+    if (foo!=bar) std::cout << "foo and bar are not equal\n";
+    if (foo<bar) std::cout << "foo is less than bar\n";
+    if (foo>bar) std::cout << "foo is greater than bar\n";
+    if (foo<=bar) std::cout << "foo is less than or equal to bar\n";
+    if (foo>=bar) std::cout << "foo is greater than or equal to bar\n";
+    std::cout << std::endl;
+    
+    std::cout << "STD PAIR TESTS" << std::endl;
+    foo = ft::make_pair (10,20);
+    bar = ft::make_pair (10.5,'A'); // ok: implicit conversion from pair<double,char>
 
-  // bar = foo;
-  // std::cout << "addr bar " << &bar << std::endl;
-  // foo = ft::vector<int>(); //invalid free
-  // std::cout << "addr foo " << &foo << std::endl;
+    std::cout << "foo: " << foo.first << ", " << foo.second << '\n';
+    std::cout << "bar: " << bar.first << ", " << bar.second << '\n';
+    std::cout << std::endl;
 
-  // std::cout << "Size of foo: " << int(foo.size()) << '\n';
-  // std::cout << "Size of bar: " << int(bar.size()) << '\n';
+    // ft::vector<int> foo (3,0);
+    // ft::vector<int> bar (5,0); //leak
+
+    // std::cout << "addr foo " << &foo << std::endl;
+    // std::cout << "addr bar " << &bar << std::endl;
+
+    // bar = foo;
+    // std::cout << "addr bar " << &bar << std::endl;
+    // foo = ft::vector<int>(); //invalid free
+    // std::cout << "addr foo " << &foo << std::endl;
+
+    // std::cout << "Size of foo: " << int(foo.size()) << '\n';
+    // std::cout << "Size of bar: " << int(bar.size()) << '\n';
   return 0;
+
 }
